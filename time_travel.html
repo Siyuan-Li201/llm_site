@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- 引入 Marked.js Markdown 解析器 -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="text/javascript">
+        window.MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)'],['(', ')']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]'], ['[', ']']]
+          }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
     <!-- 引入 DOMPurify 进行 HTML 消毒，防止 XSS 攻击 -->
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
     <style>
@@ -1098,12 +1108,12 @@
 
                     // 准备请求数据
 
-                    if (historyMessage.length === 0){
-                        historyMessage.push({
-                                "role": "system",
-                                "content": systemPrompt
-                            });
-                    }
+                    // if (historyMessage.length === 0){
+                    //     historyMessage.push({
+                    //             "role": "system",
+                    //             "content": systemPrompt
+                    //         });
+                    // }
 
                     if (historyMessage.length > 10){
                         historyMessage = [{
@@ -1112,6 +1122,11 @@
                             }];
                     }
                     
+                    historyMessage.push({
+                                "role": "system",
+                                "content": systemPrompt
+                            });
+
                     historyMessage.push({
                                 "role": "user",
                                 "content": text
@@ -1376,22 +1391,25 @@
             function displayMessage(sender, message, className) {
                 const messageDiv = document.createElement('div');
                 messageDiv.className = `message ${className}`;
-
                 const senderStrong = document.createElement('strong');
                 senderStrong.textContent = `${sender}: `;
-
                 const messageContent = document.createElement('span');
-                // 使用 Marked.js 解析 Markdown，并使用 DOMPurify 进行消毒
+
                 const rawHTML = marked.parse(message);
                 const sanitizedHTML = DOMPurify.sanitize(rawHTML);
                 messageContent.innerHTML = sanitizedHTML;
-
                 messageDiv.appendChild(senderStrong);
                 messageDiv.appendChild(messageContent);
                 conversationDiv.appendChild(messageDiv);
-
-                // 滚动到底部
                 conversationDiv.scrollTop = conversationDiv.scrollHeight;
+
+                // 在 MathJax 成功加载后调用
+                if (window.MathJax && MathJax.typesetPromise) {
+                    MathJax.typesetPromise([messageContent])
+                        .catch((err) => console.error('MathJax 错误:', err)); // 捕捉 MathJax 渲染错误
+                } else {
+                    console.warn("MathJax 未完全加载，未调用 typesetPromise");
+                }
             }
         });
     </script>
