@@ -1,19 +1,29 @@
 # LLM小站
-(不用科学上网，不用编程，一分钟快速使用各种大模型。给你的家人和不会编程的朋友一个LLM site吧)
+(不用科学上网，不用编程，快速使用各种大模型) (LLM给自己做的界面...)
 - 前端页面拖入浏览器输入api-key即可使用，一分钟上手大模型
-- openai/openai-hub api + text2video + video2text 
-- 使用各种大模型进行文本聊天、语音聊天、实时通话、分析图片/文件、图片转视频
-- 调用openai-hub api，所有代码均由o1-preview/o1-mini完成（自我进化）。我只是prompt工程师+搬运工，安全问题概不负责
+- openai-hub api + text2video + video2text (可以自行改成openai api)
+- 使用各种大模型进行文本聊天、代码助手、语音聊天、实时通话、分析图片/文件、图片转视频
+- 手机、电脑多端支持
+- 调用openai-hub api，所有代码均由o1-preview/o1-mini完成。我只是prompt工程师+搬运工
+<div align=center>  
+  <img src="img/models.png" width = 600 height = 700>
+  <img src="img/video.jpg" width = 380 height = 500>
+</div>
+
 
 ## 1. 功能介绍
 ### 1.1 快速使用大模型
 - 支持GPT3.5-Turbo、GPT4o、Claude-3.5、o1-mini、o1-preview、Luma ai、可灵、GEN3等，还可以自由集成其他api
 - 支持文本聊天、语音聊天、文件上传
+<img src="img/math.png" width = 800 height = 1000>
+
+
 ### 1.2 图片转视频
 - 支持luma、可灵、GEN3,生成视频下载链接
 ### 1.3 语音接口（Talk with everyone）
 - 输入任何人的名字，支持语音聊天，实时通话
 - 给牛顿打电话
+<img src="img/talk_with_NewTon.png" width = 800 height = 1000>
 
 ## 2. 使用方法
 ### 2.1 一分钟使用方法
