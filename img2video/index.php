@@ -89,7 +89,7 @@
     <div class="container">
         <!-- 标题区域 -->
         <div class="header">
-            <h1>Luma 视频生成器</h1>
+            <h1>视频生成器</h1>
         </div>
 
         <!-- 输入区域 -->
