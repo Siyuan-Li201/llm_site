@@ -1,10 +1,10 @@
 # LLM小站
-(不用科学上网，不用编程，快速使用各种大模型) (LLM给自己做的界面...)
+(不用科学上网，不用编程，快速使用各种大模型)
 - 前端页面拖入浏览器输入api-key即可使用，一分钟上手大模型
 - openai-hub api + text2video + video2text (可以自行改成openai api)
 - 使用各种大模型进行文本聊天、代码助手、语音聊天、实时通话、分析图片/文件、图片转视频
 - 手机、电脑多端支持
-- 调用openai-hub api，所有代码均由o1-preview/o1-mini完成。我只是prompt工程师+搬运工
+- 调用openai-hub api，所有代码均由o1-preview/o1-mini完成。
 <div align=center>  
   <img src="img/models.png" width = 800 height = 1000>
   <img src="img/video.jpg" width = 380 height = 500>
