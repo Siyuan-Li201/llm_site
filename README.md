@@ -27,6 +27,7 @@
 <img src="img/talk_with_NewTon.png" width = 800 height = 1000>
 
 ## 2. 使用方法
+- （注意正常使用请不要输入助手姓名，否则会加入内置prompt模拟打电话(下面的娱乐功能用)）
 ### 2.1 一分钟使用方法
 - 将time_travel.html拖入浏览器即可访问大部分功能（除文件上传和图片转视频功能外的所有功能）
 - 实测小米浏览器和safira可以流畅使用语音功能。edge和chrome需要授权麦克风权限，且chrome需要翻墙
