@@ -13,6 +13,7 @@
 
 ## 1. 功能介绍
 ### 1.1 快速使用大模型
+- （注意正常使用请不要输入助手姓名，否则会加入内置prompt模拟打电话(下面的娱乐功能用)）
 - 支持GPT3.5-Turbo、GPT4o、Claude-3.5、o1-mini、o1-preview、Luma ai、可灵、GEN3等，还可以自由集成其他api
 - 支持文本聊天、语音聊天、文件上传
 <img src="img/math.png" width = 800 height = 1000>
