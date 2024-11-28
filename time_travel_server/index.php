@@ -10,8 +10,8 @@
     <script type="text/javascript">
         window.MathJax = {
           tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)'], ['(', ')']],
-            displayMath: [['$$', '$$'], ['\\[', '\\]'], ['[', ']']]
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
           }
         };
     </script>
